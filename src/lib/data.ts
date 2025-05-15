@@ -132,8 +132,8 @@ export const projectsData: Project[] = [
 export const contactInfo: ContactInfo = {
   email: "Arjunvs701@gmail.com",
   socialLinks: [
-    { href: "https://github.com", label: "GitHub", icon: Github, ariaLabel: "Visit my GitHub profile" },
-    { href: "https://linkedin.com", label: "LinkedIn", icon: Linkedin, ariaLabel: "Visit my LinkedIn profile" },
+    { href: "https://github.com/Arjunvs7", label: "GitHub", icon: Github, ariaLabel: "Visit my GitHub profile" },
+    { href: "https://www.linkedin.com/in/701arjunvs/", label: "LinkedIn", icon: Linkedin, ariaLabel: "Visit my LinkedIn profile" },
     { href: "https://twitter.com", label: "Twitter", icon: Twitter, ariaLabel: "Visit my Twitter profile" },
   ],
 };
