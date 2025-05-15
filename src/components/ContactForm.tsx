@@ -43,16 +43,35 @@ const ContactForm: React.FC = () => {
 
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
-    console.log("Form data:", data);
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    setIsSubmitting(false);
-    toast({
-      title: "Message Sent!",
-      description: "Thanks for reaching out. I'll get back to you soon.",
-    });
-    form.reset();
-    setSuggestedReplies([]);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Something went wrong');
+      }
+
+      toast({
+        title: "Message Sent!",
+        description: "Thanks for reaching out. I'll get back to you soon.",
+      });
+      form.reset();
+      setSuggestedReplies([]);
+    } catch (error: any) {
+      toast({
+        title: "Failed to Send Message",
+        description: error.message || "Could not send message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleComposeMessage = async () => {
