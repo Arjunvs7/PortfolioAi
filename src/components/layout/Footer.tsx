@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
           ))}
         </div>
         <p className="text-sm text-muted-foreground">
-          &copy; {currentYear} PortfolioZen. All rights reserved.
+          &copy; {currentYear} Portfolio. All rights reserved.
         </p>
       </div>
     </footer>

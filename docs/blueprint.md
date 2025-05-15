@@ -1,4 +1,4 @@
-# **App Name**: PortfolioZen
+# **App Name**: Portfolio
 
 ## Core Features:
 

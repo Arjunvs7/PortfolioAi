@@ -7,7 +7,7 @@ import Footer from '@/components/layout/Footer';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'PortfolioZen',
+  title: 'Portfolio ',
   description: 'A personal portfolio website built with Next.js and Firebase Genkit.',
 };
 

@@ -12,6 +12,12 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        port: '',
+        pathname: '/dieqx8avj/image/upload/**',
+      },
+      {
+        protocol: 'https',
         hostname: 'picsum.photos',
         port: '',
         pathname: '/**',
